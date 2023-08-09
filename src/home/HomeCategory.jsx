@@ -49,8 +49,8 @@ const HomeCategory = () => {
     <div className='category-section style-4 padding-tb'>
       <div className='container'>
         <div className='section-header text-center'>
-          <span className='subtitle' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'regular', fontSize: '16px', color: 'black', marginTop: '2px', letterSpacing: '1px'}}>{subTitle}</span>
-          <h2 className='title' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'bold', color: '#690896', marginTop: '20px', fontSize: '2.5rem'}}>{title}</h2>
+          <span className='subtitle' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'regular', fontSize: '15.5px', color: 'black', marginTop: '4px', letterSpacing: '1px'}}>{subTitle}</span>
+          <h2 className='title' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'bold', color: '#690896', marginTop: '20px', fontSize: '2.0rem'}}>{title}</h2>
         </div>
 
         <div className='section-wrapper'>
@@ -60,6 +60,7 @@ const HomeCategory = () => {
                 <div key={i} className='col'>
                   <Link to='/shop' className='category-item'>
                     <div className='category-inner tinted-background' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'normal', color: 'white', fontSize: '25px', textAlign: 'center' }}>
+
                       {/* Image thumbnails */}
                       <div className='category-thumbnail' style={{ marginBottom: '15px' }}>
                         <img src={vol.imgUrl} alt={vol.imgAlt} style={{ maxWidth: '100%', borderRadius: '10px', width: '100%', height: '300px', objectFit: 'cover' }} />

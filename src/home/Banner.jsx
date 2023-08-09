@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import productData from '../products.json';
-import SelectedCategory from '../components/SelectedCategory';
 import 'animate.css/animate.min.css';
+import supplierImage from '../assets/images/bg-img/07.jpg';
 
 const messages = [
   { name: "Fashion", color: "#FF69B4" },
@@ -36,7 +36,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="banner-section">
+    <div className="banner-sectio" style={{ backgroundColor: '#fff', padding: '20px', marginTop: '100px'}}>
       <div className="container mx-auto">
         <div className="banner-content text-center">
           <h2 className="text-4xl md:text-6xl mb-8" style={{ 
@@ -47,40 +47,42 @@ const Banner = () => {
             margin: '0',
             padding: '0'
           }}>
-            <span className="text-purple-700">Start Your</span>
-            <div className="h-10">
-              {messages.map((category, index) => (
-                <span
-                  key={index}
-                  className={`animate__animated ${visibleMessageIndex === index ? 'animate__fadeInUp' : 'animate__fadeOut'}`}
-                  style={{ 
-                    color: category.color,
-                    display: visibleMessageIndex === index ? 'block' : 'none',
-                    fontSize: '3.5rem', // Font size for smaller screens
-                    margin: '0',
-                    padding: '0'
-                  }}
-                >
-                  {category.name}
-                </span>
-              ))}
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '70%' }}>
+              <span className="text-purple-700">Find</span>
+              <div className="h-10" style={{ display: 'flex', alignItems: 'center', marginLeft: '10px'}}>
+                {messages.map((category, index) => (
+                  <span
+                    key={index}
+                    className={`animate__animated ${visibleMessageIndex === index ? 'animate__fadeInUp' : 'animate__fadeOut'}`}
+                    style={{ 
+                      color: category.color,
+                      display: visibleMessageIndex === index ? 'block' : 'none',
+                      fontSize: '3.5rem',
+                      margin: '0',
+                      padding: '0'
+                    }}
+                  >
+                    {category.name}
+                  </span>
+                ))}
+              </div>
             </div>
           </h2>
           <h2 className="text-4xl md:text-6xl mb-8" style={{ 
             fontFamily: 'Outfit, sans-serif', 
             fontWeight: 'bold', 
             color: '#690896',
-            fontSize: '3rem', // Default font size
+            fontSize: '3rem', 
             margin: '0',
             padding: '0'
           }}>
-            <span className="text-purple-700">Business in Minutes</span>
+            <span className="text-purple-700">You Can Resell</span>
           </h2>
           <p className="text-lg md:text-xl mb-8" style={{ 
             fontFamily: 'Outfit, sans-serif', 
             fontWeight: 'normal', 
             color: '#000',
-            fontSize: '1.25rem' // Default font size
+            fontSize: '1.25rem' 
           }}>
             CliqueShoppa is loved by thousands of resellers across Africa
           </p>
@@ -93,7 +95,7 @@ const Banner = () => {
               style={{ 
                 fontFamily: 'Outfit, sans-serif', 
                 fontWeight: 'normal', 
-                width: '100%', // Input width
+                width: '100%',
                 padding: '10px',
                 marginBottom: '10px'
               }}
@@ -137,4 +139,26 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+const Home = () => {
+  return (
+    <section className='register' style={{ paddingTop: '70px' }}>
+      <div className='container'>
+        <div className='row g-4 row-cols-lg-2 row-cols-1 align-items-center'>
+          {/* Image on the left */}
+          <div className='col order-lg-1 order-2'>
+            <div className='section-header'>
+              <img src={supplierImage} alt="Supplier" style={{ width: '100%', height: '100%', borderRadius: '20px'}} />
+            </div>
+          </div>
+
+          {/* Banner component on the right */}
+          <div className='col order-lg-2 order-1' style={{ paddingBottom: '60px' }}>
+            <Banner />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Home;

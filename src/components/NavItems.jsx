@@ -22,6 +22,7 @@ const NavItems = () => {
     
     
     return (
+      
         <header className={`header-section style-4 ${isHeaderFixed ? 'header-fixed fadeInUp' : ''}`}>
     
         <div className={`header-top d-md-none  ${isSocialVisible ? 'open' : ''}`}>
