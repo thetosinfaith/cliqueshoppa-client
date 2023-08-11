@@ -6,10 +6,8 @@ import supplierImage from '../assets/images/bg-img/23.jpg';
 
 const messages = [
   { name: "Clothes", color: "#FF69B4" },
-  { name: "Makeup", color: "#FF1493" },
+  { name: "Makeup", color: "#4682B4" },
   { name: "Phones", color: "#9B59B6" },
-  { name: "Shoes", color: "#4682B4" },
-
 ];
 
 const Banner = () => {
@@ -34,65 +32,56 @@ const Banner = () => {
   };
 
   return (
-    <div className="banner-sectio" style={{ backgroundColor: '#fff', padding: '20px', marginTop: '-50px'}}>
-      <div className="container mx-auto">
-        <div className="banner-content text-center" style={{ marginBottom: '100px' }}>
-          <h2 className="text-4xl md:text-6xl mb-8" style={{ 
-              fontFamily: 'Outfit, sans-serif', 
-              fontWeight: 'bold', 
-              color: '#690896',
-              fontSize: '4.5rem',  // Default font size for desktop
+    <div className="banner-content text-center" style={{backgroundColor: '#fff', padding: '10px', marginTop: '-50px' }}>
+  <h2 className="text-4xl md:text-6xl mb-8" style={{ 
+      fontFamily: 'Outfit, sans-serif', 
+      fontWeight: 'bold', 
+      color: '#690896',
+      fontSize: '4.5rem',  // Default font size for desktop
+      margin: '0',
+      padding: '0',
+      '@media (max-width: 768px)': {
+        fontSize: '2.5rem'  // Font size for tablets
+      },
+      '@media (max-width: 350px)': {
+        fontSize: '1.8rem'  // Font size for mobile
+      }
+    }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '70%', marginTop: '120px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+        <span className="text-purple-700" style={{ fontSize: '48px', marginRight: '10px', marginBottom: '20px' }}>Make Money</span>
+        <span style={{ fontSize: '3.0rem', color: '#000', marginLeft: '10px' }}></span>
+      </div>
+      <div className="h-10" style={{ display: 'flex', alignItems: 'center', marginTop: '-20px'}}>
+        <span style={{ fontSize: '3.0rem', marginRight: '10px', color: '690896'}}>Selling</span>
+        {messages.map((category, index) => (
+          <span
+            key={index}
+            className={`animate__animated ${visibleMessageIndex === index ? 'animate__fadeInUp' : 'animate__fadeOut'}`}
+            style={{ 
+              color: category.color,
+              display: visibleMessageIndex === index ? 'block' : 'none',
+              fontSize: '3.2rem',
               margin: '0',
-              padding: '0',
-              '@media (max-width: 768px)': {
-                fontSize: '2.5rem'  // Font size for tablets
-              },
-              '@media (max-width: 480px)': {
-                fontSize: '2rem'  // Font size for mobile
-              }
-            }}>
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '70%', marginTop: '120px' }}>
-              <span className="text-purple-700" style={{ fontSize: '48px', marginRight: '10px', marginBottom: '20px' }}>Sell</span>
-              <div className="h-10" style={{ display: 'flex', alignItems: 'center', fontSize: '48px', marginBottom: '20px' }}>
-                {messages.map((category, index) => (
-                  <span
-                    key={index}
-                    className={`animate__animated ${visibleMessageIndex === index ? 'animate__fadeInUp' : 'animate__fadeOut'}`}
-                    style={{ 
-                      color: category.color,
-                      display: visibleMessageIndex === index ? 'block' : 'none',
-                      fontSize: '3.2rem',
-                      margin: '0',
-                      padding: '0'
-                    }}
-                  >
-                    {category.name}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </h2>
-          <h2 className="text-4xl md:text-6xl mb-8" style={{ 
-              fontFamily: 'Outfit, sans-serif', 
-              fontWeight: 'bold', 
-              color: '#690896',
-              fontSize: '3rem', 
-              margin: '0',
-              padding: '0',
-              marginBottom: '20px'
-            }}>
-            Make Money
-          </h2>
+              padding: '0'
+            }}
+          >
+            {category.name}
+          </span>
+        ))}
+      </div>
+    </div>
+  </h2>
           <p style={{ 
               fontFamily: 'Outfit, sans-serif', 
               fontWeight: 'normal', 
               color: '#000',
               fontSize: '1.20rem', 
-              marginBottom: '20px'
+              marginTop: '50px'
             }}>
             CliqueShoppa is loved by thousands of resellers across Africa
           </p>
-          <form style={{ marginBottom: '20px', marginBottom: '-100px', display: 'flex', alignItems: 'center' }}>
+          <form style={{ marginBottom: '-0px', display: 'flex', alignItems: 'center' }}>
             <input
               type="text"
               name="search"
@@ -106,7 +95,7 @@ const Banner = () => {
                 marginRight: '10px',
                 border: '1px solid #ccc', 
                 borderRadius: '5px', 
-                marginTop: '20px'
+                marginTop: '40px'
               }}
               value={searchInput}
               onChange={handleSearch}
@@ -120,7 +109,7 @@ const Banner = () => {
               padding: '10px 20px',
               cursor: 'pointer',
               borderRadius: '5px',
-              marginTop: '20px'
+              marginTop: '40px'
             }}>
               <i className="icofont-search-1"></i>
             </button>
@@ -145,8 +134,6 @@ const Banner = () => {
             ))}
           </ul>
         </div>
-      </div>
-    </div>
   );
 };
 
