@@ -1,11 +1,9 @@
 import React from 'react';
 
-const title1 = <img src="" alt="" />;
 const title = "Company";
-const desc = "CliqueShoppa offers their clients a way to start their own business with zero capital by providing a range of ready-to-sell products sourced from multiple suppliers.";
 const Resources = "Resources";
 const Product = "Product";
-const Support = "Support";
+const Support = "Contact";
 
 const addressList = [
     {
@@ -18,9 +16,8 @@ const addressList = [
     },
     {
         iconName: 'icofont-envelope',
-        text: 'info@shopcart.com',
+        text: 's.com',
     },
-
 ];
 
 const socialList = [
@@ -111,7 +108,7 @@ const tweetList = [
         link: '#',
     },
     {
-        text: 'support@cliqueshoppa.com ',
+        text: 'support@cliqueshoppa.com',
         link: '#',
     },
     {
@@ -121,27 +118,53 @@ const tweetList = [
 ];
 
 const Footer = () => {
+    const columnStyle = {
+        color: '#082552',
+        fontFamily: 'Outfit, sans-serif',
+        listStyleType: 'none',
+        padding: 0,
+        margin: 0,
+    };
+
+    const linkStyle = {
+        color: '#082552',
+        fontFamily: 'Outfit, sans-serif',
+        textDecoration: 'none',
+    };
+
+    const footerTitleStyle = {
+        color: '#082552',
+        fontFamily: 'Outfit, sans-serif',
+    };
+
     return (
-        <footer className='syle-2'>
-            <div className='footer-top dark-view padding-tb'>
+        <footer className='style-2'>
+            <div className='footer-tp dark-view padding-tb' style={{backgroundColor: 'white', marginLeft: '100px'}}>
                 <div className='container'>
-                    <div className='row g-4 row-cols-xl-4 row-cols-sm-2 row-cols-1 justify-content-center' style={{ color: '#082552', fontFamily: 'Outfit, sans-serif' }}>
+                    <div className='row g-4 row-cols-xl-4 row-cols-sm-2 row-cols-1 justify-content-center' style={{ color: '#082552', fontFamily: 'Outfit, sans-serif', marginTop: '8px' }}>
                         <div className="col">
                             <div className="footer-item our-address">
                                 <div className="footer-inner">
-                                    <div className="footer-content">
+                                    <div className="footer-content" style={{color: '#082552'}}>
                                         <div className="title">
-                                            <h4 style={{ color: '#082552', fontFamily: 'Outfit, sans-serif'}}>{title}</h4>
+                                            <h4 style={footerTitleStyle}>{title}</h4>
                                         </div>
-                                        <div className="content">
-                                            <ul className='u' style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+                                        <div className="content" style={{
+                                            color: '#082552',
+                                            fontFamily: 'Outfit, sans-serif',
+                                            listStyleType: 'none',
+                                            padding: 0,
+                                            margin: 0,
+                                            lineHeight: '2.5',
+                                        }}>
+                                            <ul style={columnStyle}>
                                                 {addressList.map((val, i) => (
                                                     <li key={i}>
                                                         <i className={val.iconName}></i> {val.text}
                                                     </li>
                                                 ))}
                                             </ul>
-                                            <ul className='ul' style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+                                            <ul style={columnStyle}>
                                                 {socialList.map((val, i) => (
                                                     <li key={i}>
                                                         <a href={val.siteLink}><i className={val.iconName}></i></a>
@@ -158,14 +181,21 @@ const Footer = () => {
                             <div className="footer-item">
                                 <div className="footer-inner">
                                     <div className="footer-content">
-                                        <div className="title" style={{ color: '#082552', fontFamily: 'Outfit, sans-serif' }}>
-                                            <h4 style={{ color: '#082552', fontFamily: 'Outfit, sans-serif' }}>{Product}</h4>
+                                        <div className="title">
+                                            <h4 style={footerTitleStyle}>{Product}</h4>
                                         </div>
-                                        <div className="content">
-                                            <ul className='ul' style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+                                        <div className="content" style={{
+                                            color: '#082552',
+                                            fontFamily: 'Outfit, sans-serif',
+                                            listStyleType: 'none',
+                                            padding: 0,
+                                            margin: 0,
+                                            lineHeight: '2.5',
+                                        }}>
+                                            <ul style={columnStyle}>
                                                 {quickList.map((val, i) => (
-                                                    <li key={i} style={{ color: '#082552', fontFamily: 'Outfit, sans-serif'}}>
-                                                        <a href={val.link} style={{ color: '#082552', fontFamily: 'Outfit, sans-serif'}}>{val.text}</a>
+                                                    <li key={i}>
+                                                        <a href={val.link} style={linkStyle}>{val.text}</a>
                                                     </li>
                                                 ))}
                                             </ul>
@@ -179,14 +209,21 @@ const Footer = () => {
                             <div className="footer-item">
                                 <div className="footer-inner">
                                     <div className="footer-content">
-                                        <div className="title" style={{ color: '#082552', fontFamily: 'Outfit, sans-serif'}}>
-                                            <h4 style={{ color: '#082552', fontFamily: 'Outfit, sans-serif'}}>{Resources}</h4>
+                                        <div className="title">
+                                            <h4 style={footerTitleStyle}>{Resources}</h4>
                                         </div>
-                                        <div className="content">
-                                            <ul className='ul' style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+                                        <div className="content" style={{
+                                            color: '#082552',
+                                            fontFamily: 'Outfit, sans-serif',
+                                            listStyleType: 'none',
+                                            padding: 0,
+                                            margin: 0,
+                                            lineHeight: '2.5',
+                                        }}>
+                                            <ul style={columnStyle}>
                                                 {ItemList.map((val, i) => (
-                                                    <li key={i} style={{ color: '#082552' }}>
-                                                        <a href={val.link} style={{ color: '#082552', fontFamily: 'Outfit, sans-serif' }}>{val.text}</a>
+                                                    <li key={i}>
+                                                        <a href={val.link} style={linkStyle}>{val.text}</a>
                                                     </li>
                                                 ))}
                                             </ul>
@@ -196,18 +233,25 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        <div className="col" style={{ color: '#082552' }}>
+                        <div className="col">
                             <div className="footer-item">
                                 <div className="footer-inner">
                                     <div className="footer-content">
                                         <div className="title">
-                                            <h4 style={{ color: '#082552'}}>{Support}</h4>
+                                            <h4 style={footerTitleStyle}>{Support}</h4>
                                         </div>
-                                        <div className="content">
-                                            <ul className='ul' style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+                                        <div className="content" style={{
+                                            color: '#082552',
+                                            fontFamily: 'Outfit, sans-serif',
+                                            listStyleType: 'none',
+                                            padding: 0,
+                                            margin: 0,
+                                            lineHeight: '2.5',
+                                        }}>
+                                            <ul style={columnStyle}>
                                                 {tweetList.map((val, i) => (
-                                                    <li key={i} style={{ color: '#082552' }}>
-                                                        <a href={val.link} style={{ color: '#082552' }}>{val.text}</a>
+                                                    <li key={i}>
+                                                        <a href={val.link} style={linkStyle}>{val.text}</a>
                                                     </li>
                                                 ))}
                                             </ul>
@@ -221,10 +265,10 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className='footer-bottom' style={{ color: '#082552', marginRight: '100px' }}>
+            <div className='footer-bottom' style={{ color: '#082552', marginRight: '100px', backgroundColor: 'white' }}>
                 <div className='container'>
                     <div className='section-wrapper'>
-                        <p>&copy; 2024 <a href="/">CliqueShoppa</a></p>
+                        <p>&copy; 2024 <a href="/" style={linkStyle}>CliqueShoppa</a></p>
                     </div>
                 </div>
             </div>
