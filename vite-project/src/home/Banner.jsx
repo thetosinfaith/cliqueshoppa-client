@@ -69,7 +69,7 @@ const Banner = () => {
 
   return (
     <div className='banner-section style-4'>
-      <div className="container" style={{ marginTop: '-104px', paddingTop: '50px', paddingBottom: '40px' }}>
+      <div className="container" style={{ marginTop: '-104px', paddingTop: '20px', paddingBottom: '40px' }}>
         <div className='banner-content'>
           <h2 style={{ fontFamily: 'Outfit, sans-serif', fontWeight: '900', fontSize: '70px', marginBottom: '90px', marginTop: '10px' }}>
             <div style={{ marginBottom: '50px' }}>
