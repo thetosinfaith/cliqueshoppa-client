@@ -9,9 +9,10 @@ const messages = [
   { name: "Perfume", color: "#FF6347" },
   { name: "Jewelries", color: "#4682B4" },
   { name: "Makeup", color: "#FF1493" },
-  { name: "Furniture", color: "#FF6F61" },
-  { name: "Electronics", color: "#9B59B6" },
-  { name: "Bedding", color: "#2ECC71" }
+  { name: "Phones", color: "#9B59B6" },
+  { name: "Books", color: "#3498DB" },
+  { name: "Sports", color: "#1ABC9C" },
+  { name: "Toys", color: "#E67E22" },
 ];
 
 const Banner = () => {
@@ -38,18 +39,24 @@ const Banner = () => {
   return (
     <div className="banner-sectio" style={{ backgroundColor: '#fff', padding: '20px', marginTop: '100px'}}>
       <div className="container mx-auto">
-        <div className="banner-content text-center">
+        <div className="banner-content text-center" style={{ marginBottom: '100px' }}>
           <h2 className="text-4xl md:text-6xl mb-8" style={{ 
-            fontFamily: 'Outfit, sans-serif', 
-            fontWeight: 'bold', 
-            color: '#690896',
-            fontSize: '3.5rem', 
-            margin: '0',
-            padding: '0'
-          }}>
+              fontFamily: 'Outfit, sans-serif', 
+              fontWeight: 'bold', 
+              color: '#690896',
+              fontSize: '4.5rem',  // Default font size for desktop
+              margin: '0',
+              padding: '0',
+              '@media (max-width: 768px)': {
+                fontSize: '2.5rem'  // Font size for tablets
+              },
+              '@media (max-width: 480px)': {
+                fontSize: '2rem'  // Font size for mobile
+              }
+            }}>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '70%' }}>
-              <span className="text-purple-700">Find</span>
-              <div className="h-10" style={{ display: 'flex', alignItems: 'center', marginLeft: '10px'}}>
+              <span className="text-purple-700" style={{ fontSize: '48px', marginRight: '10px' }}>Sell</span>
+              <div className="h-10" style={{ display: 'flex', alignItems: 'center', fontSize: '48px' }}>
                 {messages.map((category, index) => (
                   <span
                     key={index}
@@ -57,7 +64,7 @@ const Banner = () => {
                     style={{ 
                       color: category.color,
                       display: visibleMessageIndex === index ? 'block' : 'none',
-                      fontSize: '3.5rem',
+                      fontSize: '3.2rem',
                       margin: '0',
                       padding: '0'
                     }}
@@ -69,57 +76,63 @@ const Banner = () => {
             </div>
           </h2>
           <h2 className="text-4xl md:text-6xl mb-8" style={{ 
-            fontFamily: 'Outfit, sans-serif', 
-            fontWeight: 'bold', 
-            color: '#690896',
-            fontSize: '3rem', 
-            margin: '0',
-            padding: '0'
-          }}>
-            <span className="text-purple-700">You Can Resell</span>
+              fontFamily: 'Outfit, sans-serif', 
+              fontWeight: 'bold', 
+              color: '#690896',
+              fontSize: '3rem', 
+              margin: '0',
+              padding: '0'
+            }}>
+            Earn from home
           </h2>
-          <p className="text-lg md:text-xl mb-8" style={{ 
-            fontFamily: 'Outfit, sans-serif', 
-            fontWeight: 'normal', 
-            color: '#000',
-            fontSize: '1.25rem' 
-          }}>
+          <p style={{ 
+              fontFamily: 'Outfit, sans-serif', 
+              fontWeight: 'normal', 
+              color: '#000',
+              fontSize: '1.25rem', 
+              marginTop: '20px'
+            }}>
             CliqueShoppa is loved by thousands of resellers across Africa
           </p>
-          <form style={{ marginBottom: '20px' }}>
+          <form style={{ marginBottom: '20px', marginTop: '25px', display: 'flex', alignItems: 'center' }}>
             <input
               type="text"
               name="search"
               id="search"
-              placeholder="Find Product for Resale..."
-              style={{ 
-                fontFamily: 'Outfit, sans-serif', 
-                fontWeight: 'normal', 
+              placeholder="Search product..."
+              style={{
+                fontFamily: 'Outfit, sans-serif',
+                fontWeight: 'normal',
                 width: '100%',
                 padding: '10px',
-                marginBottom: '10px'
+                marginRight: '10px',
+                border: '1px solid #ccc', 
+                borderRadius: '5px', 
+                marginTop: '20px'
               }}
               value={searchInput}
               onChange={handleSearch}
             />
-            <button type='submit' style={{ 
-              fontFamily: 'Outfit, sans-serif', 
-              fontWeight: 'normal', 
+            <button type='submit' style={{
+              fontFamily: 'Outfit, sans-serif',
+              fontWeight: 'normal',
               background: '#690896',
               color: '#fff',
               border: 'none',
               padding: '10px 20px',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              borderRadius: '5px',
+              marginTop: '20px'
             }}>
               <i className="icofont-search-1"></i>
             </button>
           </form>
           <ul className='ul' style={{ 
-            fontFamily: 'Outfit, sans-serif', 
-            fontWeight: 'normal',
-            listStyleType: 'none',
-            padding: '0'
-          }}>
+              fontFamily: 'Outfit, sans-serif', 
+              fontWeight: 'normal',
+              listStyleType: 'none',
+              padding: '0'
+            }}>
             {searchInput && filterProduct.map((product, index) => (
               <li key={index} style={{ marginBottom: '10px' }}>
                 <Link to={`./shop/${product.id}`} style={{ 
@@ -144,13 +157,14 @@ const Home = () => {
     <section className='register' style={{ paddingTop: '70px' }}>
       <div className='container'>
         <div className='row g-4 row-cols-lg-2 row-cols-1 align-items-center'>
+
           {/* Image on the left */}
           <div className='col order-lg-1 order-2'>
             <div className='section-header'>
-              <img src={supplierImage} alt="Supplier" style={{ width: '100%', height: '100%', borderRadius: '20px'}} />
+              <img src={supplierImage} alt="Supplier" style={{ width: '100%', height: '100%', marginTop: '70px'}} />
             </div>
           </div>
-
+          
           {/* Banner component on the right */}
           <div className='col order-lg-2 order-1' style={{ paddingBottom: '60px' }}>
             <Banner />
