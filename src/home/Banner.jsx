@@ -5,9 +5,9 @@ import 'animate.css/animate.min.css';
 import supplierImage from '../assets/images/bg-img/23.jpg';
 
 const messages = [
-  { name: "Clothes", color: "#FF69B4" },
-  { name: "Makeup", color: "#4682B4" },
-  { name: "Phones", color: "#9B59B6" },
+  { name: "Bags", color: "#FF69B4" },
+  { name: "Shoes", color: "#3498DB" },
+  { name: "Books", color: "#E74C3C" },
 ];
 
 const Banner = () => {
@@ -32,28 +32,28 @@ const Banner = () => {
   };
 
   return (
-    <div className="banner-content text-center" style={{backgroundColor: '#fff', padding: '10px', marginTop: '-50px' }}>
+    <div className="banner-content text-center" style={{backgroundColor: '#fff', padding: '10px', marginTop: '-50px'}}>
   <h2 className="text-4xl md:text-6xl mb-8" style={{ 
       fontFamily: 'Outfit, sans-serif', 
       fontWeight: 'bold', 
       color: '#690896',
-      fontSize: '4.5rem',  // Default font size for desktop
+      fontSize: '4.0rem',  // Default font size for desktop
       margin: '0',
       padding: '0',
       '@media (max-width: 768px)': {
         fontSize: '2.5rem'  // Font size for tablets
       },
       '@media (max-width: 350px)': {
-        fontSize: '1.8rem'  // Font size for mobile
+        fontSize: '1.5rem'  // Font size for mobile
       }
     }}>
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '70%', marginTop: '120px' }}>
       <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-        <span className="text-purple-700" style={{ fontSize: '48px', marginRight: '10px', marginBottom: '20px' }}>Make Money</span>
-        <span style={{ fontSize: '3.0rem', color: '#000', marginLeft: '10px' }}></span>
+        <span className="text-purple-700" style={{ fontSize: '45px', marginRight: '10px', marginBottom: '20px' }}>Make Money</span>
+        <span style={{ fontSize: '2.8rem', color: '#000', marginLeft: '10px' }}></span>
       </div>
       <div className="h-10" style={{ display: 'flex', alignItems: 'center', marginTop: '-20px'}}>
-        <span style={{ fontSize: '3.0rem', marginRight: '10px', color: '690896'}}>Selling</span>
+        <span style={{ fontSize: '2.8rem', marginRight: '10px', color: '690896'}}>Selling</span>
         {messages.map((category, index) => (
           <span
             key={index}
@@ -61,7 +61,7 @@ const Banner = () => {
             style={{ 
               color: category.color,
               display: visibleMessageIndex === index ? 'block' : 'none',
-              fontSize: '3.2rem',
+              fontSize: '3.0rem',
               margin: '0',
               padding: '0'
             }}
