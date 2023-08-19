@@ -7,77 +7,35 @@ const Support = "Contact";
 
 const addressList = [
     {
-        iconName: 'icofont-google-map',
-        text: 'New York, USA.',
+        text: 'About Us',
     },
     {
-        iconName: 'icofont-phone',
-        text: '+880 123 456 789',
+        
+        text: 'Careers',
     },
     {
-        iconName: 'icofont-envelope',
-        text: 's.com',
+        
+        text: 'Press',
+    },
+    {
+        
+        text: 'Ambassadors',
+    },
+    {
+        
+        text: 'Privacy',
+    },
+    {
+        
+        text: 'Terms',
     },
 ];
 
-const socialList = [
-    {
-        iconName: 'icofont-facebook',
-        siteLink: '#',
-        className: 'facebook',
-    },
-    {
-        iconName: 'icofont-twitter',
-        siteLink: '#',
-        className: 'twitter',
-    },
-    {
-        iconName: 'icofont-linkedin',
-        siteLink: '#',
-        className: 'linkedin',
-    },
-    {
-        iconName: 'icofont-instagram',
-        siteLink: '#',
-        className: 'instagram',
-    },
-    {
-        iconName: 'icofont-pinterest',
-        siteLink: '#',
-        className: 'pinterest',
-    },
-];
+
 
 const ItemList = [
     {
-        text: 'All Products',
-        link: '/shop',
-    },
-    {
-        text: 'Shop',
-        link: '/shop',
-    },
-    {
-        text: 'Blog',
-        link: '/blog',
-    },
-    {
-        text: 'About',
-        link: '/about',
-    },
-    {
-        text: 'Policy',
-        link: '#',
-    },
-    {
-        text: 'FAQs',
-        link: '/about',
-    },
-];
-
-const quickList = [
-    {
-        text: 'Summer Sessions',
+        text: 'Customer Stories',
         link: '#',
     },
     {
@@ -89,17 +47,45 @@ const quickList = [
         link: '#',
     },
     {
-        text: 'Forums',
+        text: 'Business Education',
         link: '#',
     },
     {
-        text: 'Privacy Policy',
+        text: 'Engineering',
         link: '#',
     },
     {
-        text: 'Terms of Use',
+        text: 'Blog',
         link: '#',
     },
+    {
+        text: 'Help Center',
+        link: '#',
+    },
+];
+
+const quickList = [
+    {
+        text: 'All Products',
+        link: '/shop',
+    },
+    {
+        text: 'Shop',
+        link: '/shop',
+    },
+    {
+        text: 'Embed API',
+        link: '/about',
+    },
+    {
+        text: 'Forum Circles',
+        link: '#',
+    },
+    {
+        text: 'Got a suggestion?',
+        link: '/about',
+    },
+    
 ];
 
 const tweetList = [
@@ -139,9 +125,9 @@ const Footer = () => {
 
     return (
         <footer className='style-2'>
-            <div className='footer-tp dark-view padding-tb' style={{backgroundColor: 'white', marginLeft: '100px'}}>
+            <div className='footer-tp dark-view padding-tb' style={{backgroundColor: 'white'}}>
                 <div className='container'>
-                    <div className='row g-4 row-cols-xl-4 row-cols-sm-2 row-cols-1 justify-content-center' style={{ color: '#082552', fontFamily: 'Outfit, sans-serif', marginTop: '8px' }}>
+                    <div className='row g-4 row-cols-xl-4 row-cols-sm-2 row-cols-1 justify-content-center' style={{ color: '#082552', fontFamily: 'Outfit, sans-serif', marginTop: '10px' }}>
                         <div className="col">
                             <div className="footer-item our-address">
                                 <div className="footer-inner">
@@ -164,13 +150,7 @@ const Footer = () => {
                                                     </li>
                                                 ))}
                                             </ul>
-                                            <ul style={columnStyle}>
-                                                {socialList.map((val, i) => (
-                                                    <li key={i}>
-                                                        <a href={val.siteLink}><i className={val.iconName}></i></a>
-                                                    </li>
-                                                ))}
-                                            </ul>
+                                            
                                         </div>
                                     </div>
                                 </div>
