@@ -109,19 +109,19 @@ const CategoryShowcase = () => {
               <li onClick={() => filterItem('All')} style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'bold', color: '#690896' }}>
                 All
               </li>
-              <li onClick={() => filterItem('Ring Lights')} style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'bold', color: '#690896' }}>
+              <li onClick={() => filterItem('Ring Lights')} style={{ fontFamily: 'Outfit, sans-serif'}}>
                 Ring Lights
               </li>
-              <li onClick={() => filterItem('Baby Products')} style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'bold', color: '#690896' }}>
+              <li onClick={() => filterItem('Baby Products')} style={{ fontFamily: 'Outfit, sans-serif'}}>
                 Baby Products
               </li>
-              <li onClick={() => filterItem('Phones & Tablets')} style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'bold', color: '#690896' }}>
+              <li onClick={() => filterItem('Phones & Tablets')} style={{ fontFamily: 'Outfit, sans-serif'}}>
                 Phones & Tablets
               </li>
-              <li onClick={() => filterItem('Beauty Care')} style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'bold', color: '#690896' }}>
+              <li onClick={() => filterItem('Beauty Care')} style={{ fontFamily: 'Outfit, sans-serif'}}>
                 Beauty Care
               </li>
-              <li onClick={() => filterItem('Fashion & Watches')} style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'bold', color: '#690896' }}>
+              <li onClick={() => filterItem('Fashion & Watches')} style={{ fontFamily: 'Outfit, sans-serif'}}>
                 Fashion & Watches
               </li>
             </ul>
@@ -148,7 +148,7 @@ const CategoryShowcase = () => {
                         <div className='course-author' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'normal', color: '#690896' }}>
                           <Link to='/'>{product.brand}</Link>
                         </div>
-                        <div className='course-price' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'bold', color: '#690896' }}>
+                        <div className='course-price' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'bold', color: '#690896', fontSize: '16px'}}>
                           {product.price}
                         </div>
                       </div>

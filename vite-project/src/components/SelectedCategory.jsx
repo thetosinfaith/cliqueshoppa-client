@@ -20,7 +20,7 @@ const SelectedCategory = ({ select }) => {
         <option value="college">College</option>
         <option value="conference">Conference</option>
         <option value="construction">Construction</option>
-        <option value="corona-virus">Corona Virus</option>
+        <option value="corona-virus">Corona Virus</option>  
         <option value="corporate">Corporate</option>
         <option value="covid19">Covid19</option>
         <option value="digital-products">Digital Products</option>
