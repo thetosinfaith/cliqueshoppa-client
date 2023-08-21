@@ -14,7 +14,7 @@ const Register = () => {
                 <div className='row g-4 row-cols-lg-2 row-cols-1 align-items-center'>
                     <div className='col order-lg-1 order-1'>
                         <div className='section-header'>
-                            <img src={supplierImage} alt="Supplier" style={{ width: '100%', height: '80%', borderRadius: '20px'}} />
+                            <img src={supplierImage} alt="Supplier" style={{ width: '100%', height: '100%', borderRadius: '20px'}} />
                             {subTitle && <span className='subtitle'>{subTitle}</span>}
                             {title}
                             {desc && <p>{desc}</p>}
@@ -23,7 +23,7 @@ const Register = () => {
                     <div className='col order-lg-2 order-2' style={{ paddingBottom: '60px' }}>
                         <div className='section-wrapper'>
                             <h4 style={{ fontFamily: 'Outfit, sans-serif', fontSize: '37px', color: '#690896' }}>Become a Clique - Supplier</h4>
-                            <p style={{ fontFamily: 'Outfit, sans-serif', paddingTop: '15px' }}>List your products and our resellers will sell them for you at zero cost.</p>
+                            <p style={{ fontFamily: 'Outfit, sans-serif', paddingTop: '10px' }}>Fill out the form and we'll be in touch as soon as possible.</p>
                             <form register-form="true">
                                 <input style={{ fontFamily: 'Outfit, sans-serif' }} type="text" name='businessName' placeholder="What's your business name?" className='reg-input' />
                                 <input style={{ fontFamily: 'Outfit, sans-serif' }} type="email" name='email' placeholder='Email' className='reg-input' />
@@ -51,7 +51,7 @@ const Register = () => {
                                 <option value="digital-products">Digital Products</option>
                                 </select>
                                 <textarea
-                                    style={{ fontFamily: 'Outfit, sans-serif', height: '150px' }}
+                                    style={{ fontFamily: 'Outfit, sans-serif', height: '100px' }}
                                     name='productDescription'
                                     placeholder='Tell us a bit about your product'
                                     className='reg-input'
@@ -62,7 +62,7 @@ const Register = () => {
                                 </div>
 
                                 <div style={{ paddingTop: '30px' }}>
-                                    <button type='submit' className='submit form' style={{ fontFamily: 'Outfit, sans-serif', fontSize: '16px', background: '#690896', color: 'white', borderRadius: '10px' }}>
+                                    <button type='submit' className='submit form' style={{ fontFamily: 'Outfit, sans-serif', fontSize: '16px', background: '#690896', color: 'white', borderRadius: '5px' }}>
                                         Become a Supplier
                                     </button>
                                 </div>

@@ -81,7 +81,7 @@ const HomeCategory = () => {
           </div>
 
           <div className='text-center mt-5'>
-            <Link to='/shop' className='lab-btn me-3' style={{borderRadius: '10px', marginRight: '30px', backgroundColor: 'white', fontFamily: 'Outfit, sans-serif', fontWeight: 'bold', boxShadow: 'rgba(0, 0, 0, 0.45) 0px 25px 20px -20px', border: '2px solid #690896'}}><span>{btnText}</span></Link>
+            <Link to='/shop' className='btn me-3' style={{borderRadius: '10px', marginRight: '30px', backgroundColor: 'white', fontFamily: 'Outfit, sans-serif', fontWeight: 'bold', boxShadow: 'rgba(0, 0, 0, 0.45) 0px 25px 20px -20px', border: '2px solid #690896'}}><span>{btnText}</span></Link>
 
           </div>
         </div>
