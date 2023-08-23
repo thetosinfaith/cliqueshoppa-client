@@ -5,14 +5,12 @@ import 'animate.css/animate.min.css';
 import supplierImage from '../assets/images/bg-img/07.jpg';
 
 const messages = [
-  { name: "Fashion", color: "#FF69B4" },
-  { name: "Perfume", color: "#FF6347" },
+  { name: "Clothes", color: "#FF69B4" },
+  { name: "Perfumes", color: "#FF6347" },
   { name: "Jewelries", color: "#4682B4" },
   { name: "Makeup", color: "#FF1493" },
   { name: "Phones", color: "#9B59B6" },
   { name: "Books", color: "#3498DB" },
-  { name: "Sports", color: "#1ABC9C" },
-  { name: "Toys", color: "#E67E22" },
 ];
 
 const Banner = () => {
@@ -37,7 +35,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="banner-sectio" style={{ backgroundColor: '#fff', padding: '20px', marginTop: '100px'}}>
+    <div className="banner-sectio" style={{ backgroundColor: '#fff', padding: '20px', marginTop: '10px'}}>
       <div className="container mx-auto">
         <div className="banner-content text-center" style={{ marginBottom: '100px' }}>
           <h2 className="text-4xl md:text-6xl mb-8" style={{ 
@@ -54,9 +52,9 @@ const Banner = () => {
                 fontSize: '2rem'  // Font size for mobile
               }
             }}>
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '70%' }}>
-              <span className="text-purple-700" style={{ fontSize: '48px', marginRight: '10px' }}>Sell</span>
-              <div className="h-10" style={{ display: 'flex', alignItems: 'center', fontSize: '48px' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '70%', marginTop: '120px' }}>
+              <span className="text-purple-700" style={{ fontSize: '48px', marginRight: '10px', marginBottom: '20px' }}>Sell</span>
+              <div className="h-10" style={{ display: 'flex', alignItems: 'center', fontSize: '48px', marginBottom: '20px' }}>
                 {messages.map((category, index) => (
                   <span
                     key={index}
@@ -81,16 +79,17 @@ const Banner = () => {
               color: '#690896',
               fontSize: '3rem', 
               margin: '0',
-              padding: '0'
+              padding: '0',
+              marginBottom: '20px'
             }}>
-            Earn from home
+            Earn From Home
           </h2>
           <p style={{ 
               fontFamily: 'Outfit, sans-serif', 
               fontWeight: 'normal', 
               color: '#000',
               fontSize: '1.25rem', 
-              marginTop: '20px'
+              marginBottom: '20px'
             }}>
             CliqueShoppa is loved by thousands of resellers across Africa
           </p>
@@ -160,9 +159,10 @@ const Home = () => {
 
           {/* Image on the left */}
           <div className='col order-lg-1 order-2'>
-            <div className='section-header'>
-              <img src={supplierImage} alt="Supplier" style={{ width: '100%', height: '100%', marginTop: '70px'}} />
-            </div>
+          <div className='section-header' style={{ maxHeight: '500px', overflow: 'hidden', marginTop: '70px'}}>
+  <img src={supplierImage} alt="Supplier" style={{ width: '100%', height: 'auto' }} />
+</div>
+
           </div>
           
           {/* Banner component on the right */}
