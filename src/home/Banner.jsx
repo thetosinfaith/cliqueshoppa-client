@@ -32,7 +32,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="banner-content text-center" style={{backgroundColor: '#fff', padding: '10px', marginTop: '-50px'}}>
+    <div className="banner-content text-center" style={{backgroundColor: '#fff', padding: '10px', marginTop: '-20px'}}>
   <h2 className="text-4xl md:text-6xl mb-8" style={{ 
       fontFamily: 'Outfit, sans-serif', 
       fontWeight: 'bold', 

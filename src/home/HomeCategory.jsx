@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const subTitle = "resellers make an average of #50,000 monthly";
 const title = "5000+ Products to Resell";
-const btnText = "Get Started Now";
+const btText = "Join the Waitlist";
 
 const categoryList = [
   {
@@ -50,7 +50,7 @@ const HomeCategory = () => {
       <div className='container'>
         <div className='section-header text-center'>
           <span className='subtitle' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'regular', fontSize: '15.5px', color: 'black', marginTop: '4px', letterSpacing: '1px'}}>{subTitle}</span>
-          <h2 className='title' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'bold', color: '#690896', marginTop: '20px', fontSize: '2.0rem'}}>{title}</h2>
+          <h2 className='title' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'bold', color: '#690896', marginTop: '20px', fontSize: '1.8rem'}}>{title}</h2>
         </div>
 
         <div className='section-wrapper'>
@@ -71,7 +71,7 @@ const HomeCategory = () => {
                           <i className={vol.iconName}></i>
                         </div>
                         <Link to='/shop'>
-                          <h6 style={{ color: 'white' }}>{vol.title}</h6>
+                          <h6 style={{ color: 'white'}}>{vol.title}</h6>
                         </Link>
                       </div>
                     </div>
@@ -81,10 +81,25 @@ const HomeCategory = () => {
             }
           </div>
 
-          <div className='text-center mt-5'>
-            <Link to='/shop' className='btn me-3' style={{borderRadius: '10px', marginRight: '30px', backgroundColor: 'white', fontFamily: 'Outfit, sans-serif', fontWeight: 'bold', boxShadow: 'rgba(0, 0, 0, 0.45) 0px 25px 20px -20px', border: '2px solid #690896'}}><span>{btnText}</span></Link>
+          <div className='text-center mt-5' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <Link to='/shop' className='bt me-3' style={{
+            borderRadius: '3px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '170px',
+            height: '50px',
+            backgroundColor: '#690896',
+            color: 'white',
+            fontFamily: 'Outfit, sans-serif',
+            fontWeight: 'normal',
+            boxShadow: 'rgba(0, 0, 0, 0.45) 0px 25px 20px -20px',
+            border: '5px solid #690896'
+          }}>
+            <span >{btText} <i class="icofont-sign-in"></i></span>
+          </Link>
+        </div>
 
-          </div>
         </div>
       </div>
     </div>
