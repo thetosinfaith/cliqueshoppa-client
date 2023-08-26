@@ -125,7 +125,7 @@ const Footer = () => {
 
     return (
         <footer className='style-2'>
-            <div className='footer-tp dark-view padding-tb' style={{backgroundColor: 'white'}}>
+            <div className='footer-tp dark-view padding-tb' style={{backgroundColor: 'white', marginLeft: '15px'}}>
                 <div className='container'>
                     <div className='row g-4 row-cols-xl-4 row-cols-sm-2 row-cols-1 justify-content-center' style={{ color: '#082552', fontFamily: 'Outfit, sans-serif', marginTop: '10px' }}>
                         <div className="col">
