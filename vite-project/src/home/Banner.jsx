@@ -10,8 +10,8 @@ const messages = [
 { name: "Jewelries", color: "#4682B4" },      // Steel Blue
 { name: "Makeup", color: "#FF1493" },         // Deep Pink
 { name: "Furniture", color: "#FF6F61" },     // Tangerine
-{ name: "Electronics", color: "#8A2BE2" },    // Blue Violet
-{ name: "Bedding", color: "#3CB371" }         // Medium Sea Green
+{ name: "Electronics", color: "#9B59B6" },    // Blue Violet
+{ name: "Bedding", color: "#2ECC71" }         // Medium Sea Green
 
 ];
 
