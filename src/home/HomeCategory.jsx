@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const subTitle = "Turn your Contacts to Customers";
-const title = "Discounted Wholesale Picks";
+const subTitle = "resellers make an average of #50,000 monthly";
+const title = "5000+ Products to Resell";
 const btnText = "Get Started Now";
 
 const categoryList = [
@@ -49,7 +49,7 @@ const HomeCategory = () => {
     <div className='category-section style-4 padding-tb'>
       <div className='container'>
         <div className='section-header text-center'>
-          <span className='subtitle' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'normal', color: '#58AA32'}}>{subTitle}</span>
+          <span className='subtitle' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'regular', fontSize: '16px', color: 'black', letterSpacing: '1px'}}>{subTitle}</span>
           <h2 className='title' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'bold', color: '#690896', marginTop: '20px', fontSize: '50px'}}>{title}</h2>
         </div>
 

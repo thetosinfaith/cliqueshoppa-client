@@ -70,7 +70,7 @@ const ProductData = [
   {
     imgUrl: 'src/assets/images/categoryTab/08.jpg',
     cate: 'Home Appliances',
-    title: 'Binatone 1.7 Litres Electric Kettle',
+    title: 'Binatone 1.7 Electric Kettle',
     brandImg: 'assets/images/course/author/02.jpg',
     brand: 'Binatone',
     price: '₦ 21,599',

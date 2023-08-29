@@ -27,7 +27,7 @@ const sponsorList = [
 
 const Sponsors = () => {
     return (
-        <div className='sponsor-section section-bg' style={{backgroundColor: 'yellow'}}>
+        <div className='sponsor-section section-bg' style={{backgroundColor: '#690896'}}>
             <div className='container'>
                 <div className='section-wrapper'>
                     <div className='sponsor-slider'>
@@ -48,7 +48,7 @@ const Sponsors = () => {
                                     spaceBetween: 40,
                                 },
                                 1024: {
-                                    slidesPerView: 4,
+                                    slidesPerView: 5,
                                     spaceBetween: 50,
                                 },
                             }}
