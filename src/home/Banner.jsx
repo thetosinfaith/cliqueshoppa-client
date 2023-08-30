@@ -52,7 +52,7 @@ const Banner = () => {
                 fontSize: '2rem'  // Font size for mobile
               }
             }}>
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '70%', marginTop: '120px' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '70%', marginTop: '80px' }}>
               <span className="text-purple-700" style={{ fontSize: '48px', marginRight: '10px', marginBottom: '20px' }}>Sell</span>
               <div className="h-10" style={{ display: 'flex', alignItems: 'center', fontSize: '48px', marginBottom: '20px' }}>
                 {messages.map((category, index) => (

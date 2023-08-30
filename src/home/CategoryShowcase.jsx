@@ -134,10 +134,10 @@ const CategoryShowcase = () => {
               <div key={product.id} className='col-md-3 col-sm-6 mb-4'>
                 <div className='course-item style-4' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'bold' }}>
                   <div className='course-inner' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'normal' }}>
-                    <div className='course-thumb'>
+                    <div className='course-thum'>
                       <img src={product.imgUrl} alt={product.title} />
                       <div className='course-category' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'normal', color: '#690896' }}>
-                        <a href='#'>{product.cate}</a>
+                        <a href='#' style={{marginLeft: '17px', color: '#690896'}}>{product.cate}</a>
                       </div>
                     </div>
                     <div className='course-content'>
