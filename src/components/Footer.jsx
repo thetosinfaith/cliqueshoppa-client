@@ -245,7 +245,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className='footer-bottom' style={{ color: '#082552', marginRight: '100px', backgroundColor: 'white' }}>
+            <div className='footer-bottom' style={{ color: '#082552',  backgroundColor: 'white', marginLeft: '15px' }}>
                 <div className='container'>
                     <div className='section-wrapper'>
                         <p>&copy; 2024 <a href="/" style={linkStyle}>CliqueShoppa</a></p>
