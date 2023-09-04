@@ -51,15 +51,6 @@ const LocationSprade = () => {
             ))}
           </div>
         </div>
-
-          <div className='container '>
-            <div className='section-header text-center' style={{fontFamily: 'Outfit, sans-serif', fontWeight: 'normal'}}>
-              <Link to='/sign-up' className='lab-btn mb-4' style={{backgroundColor: '#690896', color: 'white'}}>{btnText}</Link>
-              
-            </div>
-            
-        </div>
-
         
           </div>
         </div>
