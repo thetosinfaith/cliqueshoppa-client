@@ -134,7 +134,7 @@ const Footer = () => {
                                             <h4 style={{ color: '#082552', fontFamily: 'Outfit, sans-serif'}}>{title}</h4>
                                         </div>
                                         <div className="content">
-                                            <ul className='ul' style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
+                                            <ul className='u' style={{ listStyleType: 'none', padding: 0, margin: 0 }}>
                                                 {addressList.map((val, i) => (
                                                     <li key={i}>
                                                         <i className={val.iconName}></i> {val.text}
@@ -224,7 +224,7 @@ const Footer = () => {
             <div className='footer-bottom' style={{ color: '#082552', marginRight: '100px' }}>
                 <div className='container'>
                     <div className='section-wrapper'>
-                        <p>&copy; 2024 <a href="/">Shop Cart</a>. Designed by <a href="/">XYZ</a></p>
+                        <p>&copy; 2024 <a href="/">CliqueShoppa</a></p>
                     </div>
                 </div>
             </div>

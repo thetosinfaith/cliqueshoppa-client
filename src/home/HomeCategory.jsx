@@ -49,8 +49,8 @@ const HomeCategory = () => {
     <div className='category-section style-4 padding-tb'>
       <div className='container'>
         <div className='section-header text-center'>
-          <span className='subtitle' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'regular', fontSize: '16px', color: 'black', letterSpacing: '1px'}}>{subTitle}</span>
-          <h2 className='title' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'bold', color: '#690896', marginTop: '20px', fontSize: '50px'}}>{title}</h2>
+          <span className='subtitle' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'regular', fontSize: '16px', color: 'black', marginTop: '2px', letterSpacing: '1px'}}>{subTitle}</span>
+          <h2 className='title' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'bold', color: '#690896', marginTop: '20px', fontSize: '2.5rem'}}>{title}</h2>
         </div>
 
         <div className='section-wrapper'>

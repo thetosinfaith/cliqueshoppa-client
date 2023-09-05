@@ -43,7 +43,7 @@ const Banner = () => {
             fontFamily: 'Outfit, sans-serif', 
             fontWeight: 'bold', 
             color: '#690896',
-            fontSize: '3rem', // Default font size
+            fontSize: '3.5rem', 
             margin: '0',
             padding: '0'
           }}>
@@ -56,7 +56,7 @@ const Banner = () => {
                   style={{ 
                     color: category.color,
                     display: visibleMessageIndex === index ? 'block' : 'none',
-                    fontSize: '2rem', // Font size for smaller screens
+                    fontSize: '3.5rem', // Font size for smaller screens
                     margin: '0',
                     padding: '0'
                   }}
