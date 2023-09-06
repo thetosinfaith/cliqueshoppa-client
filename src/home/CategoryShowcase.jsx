@@ -5,7 +5,7 @@ const title = 'Hot Niches 💰';
 
 const ProductData = [
   {
-    imgUrl: 'src/assets/images/categoryTab/01.jpg',
+    imgUrl: '/assets/images/categoryTab/01.jpg',
     cate: 'Ring Lights & Mobile Flashes',
     title: '13-inch Ring Light + 210CM Tripod',
     brandImg: 'assets/images/course/author/01.jpg',
@@ -14,7 +14,7 @@ const ProductData = [
     id: 1,
   },
   {
-    imgUrl: 'src/assets/images/categoryTab/02.jpg',
+    imgUrl: '/assets/images/categoryTab/02.jpg',
     cate: 'Baby Products',
     title: 'Bebem Natural Essences Maxi Diaper',
     brandImg: 'assets/images/course/author/02.jpg',
