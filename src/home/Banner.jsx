@@ -2,15 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import productData from '../products.json';
 import 'animate.css/animate.min.css';
-import supplierImage from '../assets/images/bg-img/07.jpg';
+import supplierImage from '../assets/images/bg-img/23.jpg';
 
 const messages = [
   { name: "Clothes", color: "#FF69B4" },
-  { name: "Perfumes", color: "#FF6347" },
-  { name: "Jewelries", color: "#4682B4" },
   { name: "Makeup", color: "#FF1493" },
   { name: "Phones", color: "#9B59B6" },
-  { name: "Books", color: "#3498DB" },
+  { name: "Shoes", color: "#4682B4" },
+
 ];
 
 const Banner = () => {
@@ -35,7 +34,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="banner-sectio" style={{ backgroundColor: '#fff', padding: '20px', marginTop: '10px'}}>
+    <div className="banner-sectio" style={{ backgroundColor: '#fff', padding: '20px', marginTop: '-50px'}}>
       <div className="container mx-auto">
         <div className="banner-content text-center" style={{ marginBottom: '100px' }}>
           <h2 className="text-4xl md:text-6xl mb-8" style={{ 
@@ -52,7 +51,7 @@ const Banner = () => {
                 fontSize: '2rem'  // Font size for mobile
               }
             }}>
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '70%', marginTop: '80px' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '70%', marginTop: '120px' }}>
               <span className="text-purple-700" style={{ fontSize: '48px', marginRight: '10px', marginBottom: '20px' }}>Sell</span>
               <div className="h-10" style={{ display: 'flex', alignItems: 'center', fontSize: '48px', marginBottom: '20px' }}>
                 {messages.map((category, index) => (
@@ -82,18 +81,18 @@ const Banner = () => {
               padding: '0',
               marginBottom: '20px'
             }}>
-            Earn From Home
+            Make Money
           </h2>
           <p style={{ 
               fontFamily: 'Outfit, sans-serif', 
               fontWeight: 'normal', 
               color: '#000',
-              fontSize: '1.25rem', 
+              fontSize: '1.20rem', 
               marginBottom: '20px'
             }}>
             CliqueShoppa is loved by thousands of resellers across Africa
           </p>
-          <form style={{ marginBottom: '20px', marginTop: '25px', display: 'flex', alignItems: 'center' }}>
+          <form style={{ marginBottom: '20px', marginBottom: '-100px', display: 'flex', alignItems: 'center' }}>
             <input
               type="text"
               name="search"
@@ -159,7 +158,7 @@ const Home = () => {
 
           {/* Image on the left */}
           <div className='col order-lg-1 order-2'>
-          <div className='section-header' style={{ maxHeight: '500px', overflow: 'hidden', marginTop: '70px'}}>
+          <div className='section-header' style={{ maxHeight: '500px', overflow: 'hidden', marginTop: '70px', borderRadius: '5px'}}>
   <img src={supplierImage} alt="Supplier" style={{ width: '100%', height: 'auto' }} />
 </div>
 
