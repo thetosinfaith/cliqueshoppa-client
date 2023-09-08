@@ -1,43 +1,50 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import image01 from '../assets/images/category/01.jpg';
+import image02 from '../assets/images/category/02.jpg';
+import image03 from '../assets/images/category/03.jpg';
+import image04 from '../assets/images/category/04.jpg';
+import image05 from '../assets/images/category/05.jpg';
+import image06 from '../assets/images/category/06.jpg';
+
 const subTitle = "resellers make an average of #50,000 monthly";
 const title = "5000+ Products to Resell";
 const btText = "Join the Waitlist";
 
 const categoryList = [
   {
-    imgUrl: 'src/assets/images/category/01.jpg',
+    imgUrl: image01,
     imgAlt: 'category rajibraj91 rajibraj',
     iconName: 'icofont-cart',
     title: 'Shoes',
   },
   {
-    imgUrl: 'src/assets/images/category/02.jpg',
+    imgUrl: image02,
     imgAlt: 'category rajibraj91 rajibraj',
     iconName: 'icofont-cart',
     title: 'Bags',
   },
   {
-    imgUrl: 'src/assets/images/category/03.jpg',
+    imgUrl: image03,
     imgAlt: 'category rajibraj91 rajibraj',
     iconName: 'icofont-cart',
     title: 'Home Decor',
   },
   {
-    imgUrl: 'src/assets/images/category/04.jpg',
+    imgUrl: image04,
     imgAlt: 'category rajibraj91 rajibraj',
     iconName: 'icofont-cart',
     title: 'Fashion',
   },
   {
-    imgUrl: 'src/assets/images/category/05.jpg',
+    imgUrl: image05,
     imgAlt: 'category rajibraj91 rajibraj',
     iconName: 'icofont-cart',
     title: 'Beauty Care',
   },
   {
-    imgUrl: 'src/assets/images/category/06.jpg',
+    imgUrl: image06,
     imgAlt: 'category rajibraj91 rajibraj',
     iconName: 'icofont-cart',
     title: 'Kitchenware',
@@ -82,23 +89,23 @@ const HomeCategory = () => {
           </div>
 
           <div className='text-center mt-5' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <Link to='/shop' className='bt me-3' style={{
-            borderRadius: '3px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: '170px',
-            height: '50px',
-            backgroundColor: '#690896',
-            color: 'white',
-            fontFamily: 'Outfit, sans-serif',
-            fontWeight: 'normal',
-            boxShadow: 'rgba(0, 0, 0, 0.45) 0px 25px 20px -20px',
-            border: '5px solid #690896'
-          }}>
-            <span >{btText} <i class="icofont-sign-in"></i></span>
-          </Link>
-        </div>
+            <Link to='/shop' className='bt me-3' style={{
+              borderRadius: '3px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '170px',
+              height: '50px',
+              backgroundColor: '#690896',
+              color: 'white',
+              fontFamily: 'Outfit, sans-serif',
+              fontWeight: 'normal',
+              boxShadow: 'rgba(0, 0, 0, 0.45) 0px 25px 20px -20px',
+              border: '5px solid #690896'
+            }}>
+              <span>{btText} <i className="icofont-sign-in"></i></span>
+            </Link>
+          </div>
 
         </div>
       </div>
