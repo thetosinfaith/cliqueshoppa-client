@@ -58,7 +58,7 @@ const Register = () => {
                                 />
                                 <div style={{ display: 'inline-flex', alignItems: 'center', marginTop: '30px', marginLeft: '-94px' }}>
                                     <input type="radio" name="marketingConsent" value="Yes" style={{ marginRight: '0px' , marginLeft: '94px'}} />
-                                    <p style={{ fontFamily: 'Outfit, sans-serif', fontSize: '16px', marginBottom: '0', paddingLeft: '8px', verticalAlign: 'top', whiteSpace: 'nowrap' }}>Yes, I want to receive occasional marketing emails</p>
+                                    <p style={{ fontFamily: 'Outfit, sans-serif', fontSize: '16px', marginBottom: '0', paddingLeft: '8px', verticalAlign: 'top', whiteSpace: 'nowrap' }}>Yes, I want to receive marketing emails</p>
                                 </div>
 
                                 <div style={{ paddingTop: '30px' }}>
