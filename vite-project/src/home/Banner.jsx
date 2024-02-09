@@ -38,11 +38,12 @@ const Banner = () => {
   const messages = [
     "Sneakers",
     "Perfumes",
+    "Digital Products",
     "Jewelries",
     "kitchenwares",
     "Beauty Products",
     "Furnitures",
-    "Smartphones",
+    "Electronics",
     "Office Supplies"
   ];
 
