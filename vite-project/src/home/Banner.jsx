@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ReactTyped } from 'react-typed';
 import { Link } from 'react-router-dom';
 import productData from '../products.json';
+import SelectedCategory from '../components/SelectedCategory';
 
 const bannerList = [
   {
@@ -14,7 +15,7 @@ const bannerList = [
   },
   {
     iconName: "icofont-globe",
-    text: "Buy Anything Online",
+    text: "Buy Anything Online On CliqueSHoppa",
   },
 ];
 
@@ -36,9 +37,9 @@ const Banner = () => {
   };
 
   const messages = [
+    "Digital Products",
     "Sneakers",
     "Perfumes",
-    "Digital Products",
     "Jewelries",
     "kitchenwares",
     "Beauty Products",
@@ -61,15 +62,16 @@ const Banner = () => {
 
   const desc = (
     <>
-     
+      <p style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'normal', fontSize: '25px'}}>CliqueShoppa is loved by thousands of resellers across Africa</p>
     </>
   );
+  
 
   return (
     <div className='banner-section style-4'>
-      <div className="container" style={{ marginTop: '-104px', paddingTop: '0px', paddingBottom: '10px' }}>
+      <div className="container" style={{ marginTop: '-104px', paddingTop: '50px', paddingBottom: '40px' }}>
         <div className='banner-content'>
-          <h2 style={{ fontFamily: 'Outfit, sans-serif', fontWeight: '900', fontSize: '70px', marginBottom: '90px', marginTop: '20px' }}>
+          <h2 style={{ fontFamily: 'Outfit, sans-serif', fontWeight: '900', fontSize: '70px', marginBottom: '90px', marginTop: '10px' }}>
             <div style={{ marginBottom: '50px' }}>
               <span style={{ color: '#690896', display: 'block', }}>Make Money By Reselling</span>
             </div>
@@ -85,6 +87,7 @@ const Banner = () => {
           </h2>
           {desc}
           <form>
+          <SelectedCategory select={"all" }/>
             <input
               type="text"
               name="search"
@@ -94,7 +97,7 @@ const Banner = () => {
               onChange={handleSearch}/>
               <button type='submit'><i class="icofont-search-1"></i></button>
           </form>
-          <ul className='lab-ul'>
+          <ul className='lab-ul' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'normal' }}>
             {searchInput && filterProduct.map((product, index) => (
               <li key={index}>
                 <Link to={`./shop/${product.id}`}>{product.name}</Link>

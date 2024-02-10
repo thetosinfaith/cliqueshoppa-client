@@ -55,17 +55,17 @@ const NavItems = () => {
               <div className='menu-area'>
                 <div className='menu'>
                 <ul className='lab-ul'>
-                <li><Link to='/products' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'normal' }}>Product Categories</Link></li>
-                    <li><Link to='/reseller' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'normal' }}>Become a Reseller</Link></li>
+                <li><Link to='/products' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'normal' }}>About Us</Link></li>
+                    <li><Link to='/reseller' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'normal' }}>Product Categories</Link></li>
                     <li><Link to='/blog' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'normal' }}>Blog</Link></li>
-                    <li><Link to='/about' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'normal' }}>About</Link></li>
+                    <li><Link to='/about' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'normal' }}>Join as a Supplier</Link></li>
                     <li><Link to='/contact' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'normal'}}>Contact</Link></li>
                   </ul>
                 </div>
     
                 {/* sign in & log in */}
                 <Link to="/sign-up" className='lab-btn me-3 d-none d-md-block' style={{ backgroundColor: '#690896', color: 'white', fontFamily: 'Outfit, sans-serif', fontWeight: 'normal' }}>
-                Sign Up For Free
+                Become a Reseller 
                 </Link>
     
                 <Link to="/login" className='d-none d-md-block' style={{ fontFamily: 'Outfit, sans-serif' }}>Log In</Link>
