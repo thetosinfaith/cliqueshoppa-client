@@ -20,9 +20,9 @@ const Register = () => {
                             {desc && <p>{desc}</p>}
                         </div>
                     </div>
-                    <div className='col order-lg-2 order-2' style={{ paddingBottom: '60px' }}>
+                    <div className='col order-lg-2 order-2' style={{ paddingBottom: '50px'}}>
                         <div className='section-wrapper'>
-                            <h4 style={{ fontFamily: 'Outfit, sans-serif', fontSize: '30px', color: '#690896' }}>Become a Clique - Supplier</h4>
+                            <h4 style={{ fontFamily: 'Outfit, sans-serif', fontSize: '30px', color: '#690896' }}>Become a Supplier</h4>
                             <p style={{ fontFamily: 'Outfit, sans-serif', paddingTop: '10px' }}>We'll be in touch as soon as possible.</p>
                             <form register-form="true">
                                 <input style={{ fontFamily: 'Outfit, sans-serif' }} type="text" name='businessName' placeholder="What's your business name?" className='reg-input' />

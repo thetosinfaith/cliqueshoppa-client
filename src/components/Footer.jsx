@@ -23,6 +23,10 @@ const addressList = [
     },
     {
         
+        text: 'Influencer Partner Program',
+    },
+    {
+        
         text: 'Privacy',
     },
     {

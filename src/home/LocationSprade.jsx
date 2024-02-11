@@ -30,7 +30,7 @@ const LocationSprade = () => {
     <div className='clients-section style-2 padding-tb'>
       <div className='container'>
         <div className='section-header text-center'>
-          <h2 className='title' style={{ fontFamily: 'Outfit, sans-serif', fontSize: '38px', marginBottom: '20px', marginTop: '10px',color: '#690896' }}>
+          <h2 className='title' style={{ fontFamily: 'Outfit, sans-serif', fontSize: '38px', marginBottom: '20px', marginTop: '-10px',color: '#690896' }}>
             More Than <CountUp className='check' style={{ color: '#58AA32' }} end={3000} duration={10} separator="," /> Resellers
           </h2>
           <p style={{ fontFamily: 'Outfit, sans-serif', marginBottom: '20px'}}>{desc1}</p>
