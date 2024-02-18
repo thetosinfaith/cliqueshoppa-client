@@ -56,8 +56,8 @@ const NavItems = () => {
               <div className='menu-area' style={{ display: 'flex', justifyContent: 'center' }}>
                 <div className='menu'>
                   <ul className='lab-ul' style={{ listStyleType: 'none', padding: 0, margin: 0 , fontSize: '10px', color: '7287A7'}}>
-                    <li><Link to='/products' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'normal'}}>About Us</Link></li>
-                    <li><Link to='/reseller' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'normal' }}>Product Categories</Link></li>
+                    <li><Link to='/home' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'normal'}}>About Us</Link></li>
+                    <li><Link to='/shop' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'normal' }}>Product Categories</Link></li>
                     <li><Link to='/blog' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'normal' }}>Blog</Link></li>
                     <li><Link to='/about' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'normal' }}>Join as a Supplier</Link></li>
                   </ul>

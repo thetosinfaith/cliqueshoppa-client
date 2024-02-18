@@ -20,6 +20,7 @@ import {
 
 import Home from './home/Home.jsx';
 import Banner from './home/Banner.jsx';
+import Shop from './shop/Shop.jsx';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Banner />,
+      },
+      {
+        path: '/shop',
+        element: <Shop/>,
       },
     ],
   },
