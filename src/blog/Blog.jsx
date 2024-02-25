@@ -1,8 +1,12 @@
 import React from "react";
+import PageHeader from '../components/PageHeader'; 
+
 
 const Blog = () => {
     return (
-        <div>Blog Component</div>
+        <div>
+            <PageHeader title="New & Noteworthy" curPage="Latest money tips for you" />
+        </div>
     );
 };
 

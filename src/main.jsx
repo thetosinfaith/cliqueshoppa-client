@@ -21,6 +21,7 @@ import {
 import Home from './home/Home.jsx';
 import Banner from './home/Banner.jsx';
 import Shop from './shop/Shop.jsx';
+import Blog from './blog/Blog.jsx';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
         path: '/shop',
         element: <Shop/>,
       },
+      {
+        path: '/blog',
+        element: <Blog/>,
+      },
+     
     ],
   },
 ]);
