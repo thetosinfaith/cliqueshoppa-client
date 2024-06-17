@@ -1,14 +1,52 @@
 import React, { useState, useEffect } from 'react';
+import { ReactTyped } from 'react-typed';
+import { Link } from 'react-router-dom';
+import productData from '../products.json';
+
+const bannerList = [
+  {
+    iconName: "icofont-users-alt-4",
+    text: "1.5 Million Customers",
+  },
+  {
+    iconName: "icofont-notification",
+    text: "More than 2000 Merchants",
+  },
+  {
+    iconName: "icofont-globe",
+    text: "Buy Anything Online",
+  },
+];
 
 const Banner = () => {
   const [searchInput, setSearchInput] = useState('');
+  const [filterProduct, setFilterProduct] = useState([]);
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
 
+  const handleSearch = e => {
+    const searchTerm = e.target.value;
+    setSearchInput(searchTerm);
+
+    // filtering product based on search
+    const filtered = productData.filter((product) =>
+      product.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    setFilterProduct(filtered);
+  };
+
   const messages = [
-    "Zero Capital..",
-    "Various Products..",
-    "No Investment..",
+    "Sneakers",
+    "Perfumes",
+    "Jewelries",
+    "kitchenwares",
+    "Beauty Products",
+    "Furnitures",
+    "Smartphones",
+    "Office Supplies"
   ];
+
+  
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -16,44 +54,32 @@ const Banner = () => {
     }, 2000);
 
     return () => clearInterval(interval);
-  }, [messages]);
+  }, [messages.length]);
+
+  
 
   const desc = (
     <>
-      <p style={{ textAlign: 'center', fontFamily: 'Avertape, sans-serif', fontSize: '20px', marginBottom: '20px' }}>We provide various products that are ready to sell from different suppliers,</p>
-      <p style={{ textAlign: 'center', fontFamily: 'Outfit, sans-serif', fontSize: '20px' }}>You can start selling these products immediately and make money</p>
+     
     </>
   );
 
-  const bannerList = [
-    {
-      iconName: "icofont-users-alt-4",
-      text: "1.5 Million Customers",
-    },
-    {
-      iconName: "icofont-notification",
-      text: "More than 2000 Merchants",
-    },
-    {
-      iconName: "icofont-globe",
-      text: "Buy Anything Online",
-    },
-  ];
-
-  const handleInputChange = (e) => {
-    setSearchInput(e.target.value);
-  };
-
   return (
     <div className='banner-section style-4'>
-      <div className="container" style={{ marginTop: '-104px', paddingTop: '20px', paddingBottom: '10px' }}>
+      <div className="container" style={{ marginTop: '-104px', paddingTop: '0px', paddingBottom: '10px' }}>
         <div className='banner-content'>
           <h2 style={{ fontFamily: 'Outfit, sans-serif', fontWeight: '900', fontSize: '70px', marginBottom: '90px', marginTop: '20px' }}>
             <div style={{ marginBottom: '50px' }}>
-              <span style={{ color: '#690896', display: 'block' }}>Start Your Business with</span>
+              <span style={{ color: '#690896', display: 'block', }}>Make Money By Reselling</span>
             </div>
-            <div className="animated-text">
-              <span style={{ color: 'green', fontWeight: 'bold', display: 'block' }}>{messages[currentMessageIndex]}</span>
+            <div className="animated-text"  style={{ height: '70px', overflow: 'hidden' }}>
+              <ReactTyped
+                strings={messages.map(message => `<span style="color: #58AA32 ">${message}</span>`)}
+                typeSpeed={100}
+                loop={true}
+                backSpeed={50}
+                showCursor={false}
+              />
             </div>
           </h2>
           {desc}
@@ -62,19 +88,18 @@ const Banner = () => {
               type="text"
               name="search"
               id="search"
-              placeholder="Search Product..."
+              placeholder="Search a Product..." style={{fontFamily: 'Outfit, sans-serif', fontWeight: 'normal'}}
               value={searchInput}
-              onChange={handleInputChange}
-            />
+              onChange={handleSearch}/>
+              <button type='submit'><i class="icofont-search-1"></i></button>
           </form>
-          <div className="banner-list">
-            {bannerList.map((item, index) => (
-              <div key={index} className="banner-item">
-                <i className={item.iconName}></i>
-                <p>{item.text}</p>
-              </div>
+          <ul className='lab-ul'>
+            {searchInput && filterProduct.map((product, index) => (
+              <li key={index}>
+                <Link to={`./shop/${product.id}`}>{product.name}</Link>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </div>

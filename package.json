@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "react-router-dom": "^6.23.1"
+    "react-router-dom": "^6.23.1",
+    "react-typed": "^2.0.12"
   }
 }
