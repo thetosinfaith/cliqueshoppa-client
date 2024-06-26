@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const subTitle = "Choose Any Products";
-const title = "At Wholesale Prices";
+const subTitle = "Turn your Contacts to Customers";
+const title = "Discounted Wholesale Picks";
 const btnText = "Get Started Now";
 
 const categoryList = [
