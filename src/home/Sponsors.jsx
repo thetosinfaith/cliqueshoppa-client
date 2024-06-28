@@ -27,7 +27,7 @@ const sponsorList = [
 
 const Sponsors = () => {
     return (
-        <div className='sponsor-section section-bg' style={{backgroundColor: '#690896'}}>
+        <div className='sponsor-section section-bg' style={{backgroundColor: '#610896 '}}>
             <div className='container'>
                 <div className='section-wrapper'>
                     <div className='sponsor-slider'>
