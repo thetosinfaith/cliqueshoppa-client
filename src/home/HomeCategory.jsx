@@ -16,37 +16,37 @@ const categoryList = [
   {
     imgUrl: image01,
     imgAlt: 'category rajibraj91 rajibraj',
-    iconName: 'icofont-cart',
+    iconName: 'icofont-cart-alt',
     title: 'Shoes',
   },
   {
     imgUrl: image02,
     imgAlt: 'category rajibraj91 rajibraj',
-    iconName: 'icofont-cart',
+    iconName: 'icofont-cart-alt',
     title: 'Bags',
   },
   {
     imgUrl: image03,
     imgAlt: 'category rajibraj91 rajibraj',
-    iconName: 'icofont-cart',
+    iconName: 'icofont-cart-alt',
     title: 'Home Decor',
   },
   {
     imgUrl: image04,
     imgAlt: 'category rajibraj91 rajibraj',
-    iconName: 'icofont-cart',
+    iconName: 'icofont-cart-alt',
     title: 'Fashion',
   },
   {
     imgUrl: image05,
     imgAlt: 'category rajibraj91 rajibraj',
-    iconName: 'icofont-cart',
+    iconName: 'icofont-cart-alt',
     title: 'Beauty Care',
   },
   {
     imgUrl: image06,
     imgAlt: 'category rajibraj91 rajibraj',
-    iconName: 'icofont-cart',
+    iconName: 'icofont-cart-alt',
     title: 'Kitchenware',
   },
 ]

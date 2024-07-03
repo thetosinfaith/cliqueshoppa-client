@@ -33,6 +33,14 @@ const addressList = [
         
         text: 'Terms',
     },
+    {
+        
+        text: 'Our Commitment',
+    },
+    {
+        
+        text: 'Brand Assets',
+    },
 ];
 
 
@@ -40,6 +48,10 @@ const addressList = [
 const ItemList = [
     {
         text: 'Customer Stories',
+        link: '#',
+    },
+    {
+        text: 'Newsletters',
         link: '#',
     },
     {
@@ -82,7 +94,7 @@ const quickList = [
         link: '/about',
     },
     {
-        text: 'Forum Circles',
+        text: 'Content Creators',
         link: '#',
     },
     {
