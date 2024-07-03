@@ -2,13 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import productData from '../products.json';
 import 'animate.css/animate.min.css';
-import supplierImage from '../assets/images/bg-img/23.jpg';
+import supplierImage from '../assets/images/bg-img/30.jpg';
 
 const messages = [
-  { name: "Bags", color: "#FF69B4" },
-  { name: "Shoes", color: "#3498DB" },
-  { name: "Books", color: "#E74C3C" },
+  { name: "Clothes", color: "#4B0082" },
+  { name: "Books", color: "#8A2BE2" },
+  { name: "Jewelry", color: "#DAA520" },
+  { name: "Laptop", color: "#708090" },
+  { name: "Makeup", color: "#FFB6C1" },
 ];
+
 
 const Banner = () => {
   const [searchInput, setSearchInput] = useState('');
@@ -32,108 +35,95 @@ const Banner = () => {
   };
 
   return (
-    <div className="banner-content text-center" style={{backgroundColor: '#fff', padding: '10px', marginTop: '-20px'}}>
-  <h2 className="text-4xl md:text-6xl mb-8" style={{ 
-      fontFamily: 'Outfit, sans-serif', 
-      fontWeight: 'bold', 
-      color: '#690896',
-      fontSize: '4.0rem',  // Default font size for desktop
-      margin: '0',
-      padding: '0',
-      '@media (max-width: 768px)': {
-        fontSize: '2.5rem'  // Font size for tablets
-      },
-      '@media (max-width: 350px)': {
-        fontSize: '1.5rem'  // Font size for mobile
-      }
-    }}>
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', height: '70%', marginTop: '120px' }}>
-      <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-        <span className="text-purple-700" style={{ fontSize: '45px', marginRight: '10px', marginBottom: '20px' }}>Make Money</span>
-        <span style={{ fontSize: '2.8rem', color: '#000', marginLeft: '10px' }}></span>
-      </div>
-      <div className="h-10" style={{ display: 'flex', alignItems: 'center', marginTop: '-20px'}}>
-        <span style={{ fontSize: '2.8rem', marginRight: '10px', color: '690896'}}>Selling</span>
+    <div className="bg-white text-primary-foreground min-h-screen flex flex-col items-center justify-center" style={{ fontFamily: 'Outfit, sans-serif', marginTop: '100px' }}>
+      <h1><span className="text-4xl font-bold mb-4" style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'normal', color: '#690896', marginBottom: '10px' }}>Make Money</span><br /></h1>
+      <div className="banner-messages" style={{ display: 'flex', alignItems: 'center', fontFamily: 'Outfit, sans-serif', marginTop: '20px' }}>
+        <h1>
+          <span className='text-4xl font-bold' style={{ fontFamily: 'Outfit, sans-serif', fontWeight: 'normal', color: '#690896', marginBottom: '10px'}}>Selling</span><br/>
+        </h1>
         {messages.map((category, index) => (
-          <span
-            key={index}
-            className={`animate__animated ${visibleMessageIndex === index ? 'animate__fadeInUp' : 'animate__fadeOut'}`}
-            style={{ 
-              color: category.color,
-              display: visibleMessageIndex === index ? 'block' : 'none',
-              fontSize: '3.0rem',
-              margin: '0',
-              padding: '0'
-            }}
-          >
-            {category.name}
-          </span>
-        ))}
-      </div>
-    </div>
-  </h2>
-          <p style={{ 
-              fontFamily: 'Outfit, sans-serif', 
-              fontWeight: 'normal', 
-              color: '#000',
-              fontSize: '1.20rem', 
-              marginTop: '50px'
-            }}>
-            CliqueShoppa is loved by thousands of resellers across Africa
-          </p>
-          <form style={{ marginBottom: '-0px', display: 'flex', alignItems: 'center' }}>
-            <input
-              type="text"
-              name="search"
-              id="search"
-              placeholder="Search product..."
+          <h1 key={index}>
+            <span
+              className={`text-4xl font-bold animate__animated ${
+                visibleMessageIndex === index ? 'animate__fadeInUp' : 'animate__fadeOut'
+              }`}
               style={{
+                margin: 'auto',
                 fontFamily: 'Outfit, sans-serif',
                 fontWeight: 'normal',
-                width: '100%',
-                padding: '10px',
-                marginRight: '10px',
-                border: '1px solid #ccc', 
-                borderRadius: '5px', 
-                marginTop: '40px'
+                color: category.color,
+                marginBottom: '10px',
+                marginLeft: '15px',
+                display: visibleMessageIndex === index ? 'block' : 'none',
               }}
-              value={searchInput}
-              onChange={handleSearch}
-            />
-            <button type='submit' style={{
+            >
+              {category.name}
+            </span>
+          </h1>
+        ))}
+      </div>
+      <p style={{
+        fontFamily: 'Outfit, sans-serif',
+        fontWeight: 'normal',
+        color: '#000',
+        fontSize: '1.20rem',
+        marginTop: '20px'
+      }}>
+        CliqueShoppa is loved by thousands of resellers across Africa
+      </p>
+      <form style={{ marginBottom: '0px', display: 'flex', alignItems: 'center' }}>
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Search product..."
+          style={{
+            fontFamily: 'Outfit, sans-serif',
+            fontWeight: 'normal',
+            width: '100%',
+            padding: '10px',
+            marginRight: '10px',
+            border: '1px solid #ccc',
+            borderRadius: '5px',
+            marginTop: '20px'
+          }}
+          value={searchInput}
+          onChange={handleSearch}
+        />
+        <button type='submit' style={{
+          fontFamily: 'Outfit, sans-serif',
+          fontWeight: 'normal',
+          background: '#690896',
+          color: '#fff',
+          border: 'none',
+          padding: '10px 20px',
+          cursor: 'pointer',
+          borderRadius: '5px',
+          marginTop: '20px'
+        }}>
+          <i className="icofont-search-1"></i>
+        </button>
+      </form>
+      <ul className='ul' style={{
+        fontFamily: 'Outfit, sans-serif',
+        fontWeight: 'normal',
+        listStyleType: 'none',
+        padding: '0'
+      }}>
+        {searchInput && filterProduct.map((product, index) => (
+          <li key={index} style={{ marginBottom: '10px' }}>
+            <Link to={`./shop/${product.id}`} style={{
               fontFamily: 'Outfit, sans-serif',
               fontWeight: 'normal',
-              background: '#690896',
-              color: '#fff',
-              border: 'none',
-              padding: '10px 20px',
-              cursor: 'pointer',
-              borderRadius: '5px',
-              marginTop: '40px'
+              textDecoration: 'none',
+              color: '#690896'
             }}>
-              <i className="icofont-search-1"></i>
-            </button>
-          </form>
-          <ul className='ul' style={{ 
-              fontFamily: 'Outfit, sans-serif', 
-              fontWeight: 'normal',
-              listStyleType: 'none',
-              padding: '0'
-            }}>
-            {searchInput && filterProduct.map((product, index) => (
-              <li key={index} style={{ marginBottom: '10px' }}>
-                <Link to={`./shop/${product.id}`} style={{ 
-                  fontFamily: 'Outfit, sans-serif', 
-                  fontWeight: 'normal',
-                  textDecoration: 'none',
-                  color: '#690896'
-                }}>
-                  {product.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+              {product.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 
@@ -142,17 +132,14 @@ const Home = () => {
     <section className='register' style={{ paddingTop: '70px' }}>
       <div className='container'>
         <div className='row g-4 row-cols-lg-2 row-cols-1 align-items-center'>
-
           {/* Image on the left */}
           <div className='col order-lg-1 order-2'>
-          <div className='section-header' style={{ maxHeight: '500px', overflow: 'hidden', marginTop: '70px', borderRadius: '5px'}}>
-  <img src={supplierImage} alt="Supplier" style={{ width: '100%', height: 'auto' }} />
-</div>
-
+            <div className='section-header' style={{ maxHeight: '500px', overflow: 'hidden', marginTop: '70px', borderRadius: '5px' }}>
+              <img src={supplierImage} alt="Supplier" style={{ width: '100%', height: '100%' }} />
+            </div>
           </div>
-          
           {/* Banner component on the right */}
-          <div className='col order-lg-2 order-1' style={{ paddingBottom: '60px' }}>
+          <div className='col order-lg-2 order-1 banner-container' style={{ paddingBottom: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
             <Banner />
           </div>
         </div>

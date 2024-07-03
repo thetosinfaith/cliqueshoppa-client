@@ -66,7 +66,7 @@ const NavItems = () => {
 
                 {/* sign in & log in */}
                 <Link to="/sign-up" className='lab-btn me-3 d-none d-md-block' style={{ marginLeft: '-10px', backgroundColor: '#690896', color: 'white', fontFamily: 'Outfit, sans-serif', fontWeight: 'normal' }}>
-                Become a Reseller <i class="icofont-sign-in"></i>
+                Join as a Reseller <i class="icofont-sign-in"></i>
                 </Link>
     
                 <Link to="/login" className='d-none d-md-block' style={{ fontFamily: 'Outfit, sans-serif', marginRight: '50px' }}>Log In</Link>
