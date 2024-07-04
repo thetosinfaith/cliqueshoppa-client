@@ -164,7 +164,7 @@ const CategoryShowcase = () => {
                         {hoveredId === product.id && (
                           <div className='add-to-cart-button' style={{marginLeft: '15px'}}>
                             <button className='btn btn-primary' style={{backgroundColor: 'green', border: '2px green'}}>
-                               <i class="icofont-cart-alt"></i> Add to Cart 
+                               <i class="icofont-cart-alt"></i> Resell Product 
                             </button>
                           </div>
                         )}
@@ -207,11 +207,11 @@ const CategoryShowcase = () => {
                           color: 'white',
                           fontFamily: 'Outfit, sans-serif',
                           fontWeight: 'normal',
-                          fontSize: '19px',
+                          fontSize: '16px',
                           boxShadow: 'rgba(0, 0, 0, 0.45) 0px 25px 20px -20px',
                           border: '5px solid #690896'
                         }}>
-                          <span>{btText}</span>
+                          <span>{btText}<i className="icofont-click"></i></span>
                         </Link>
                       </div>
       </div>
